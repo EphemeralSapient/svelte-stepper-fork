@@ -21,6 +21,23 @@ And yes, I've used LLM for this :P
 
 Full credit to [@efstajas](https://github.com/efstajas) for the original [svelte-stepper](https://github.com/efstajas/svelte-stepper) implementation.
 
+## Demo
+
+GitHub Pages deployment available via Actions workflow.
+
+## Development
+
+```bash
+# Install
+bun install
+
+# Dev server
+bun run dev
+
+# Build
+bun run build
+```
+
 ## License
 
 MIT (inherited from original)
