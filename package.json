@@ -1,0 +1,99 @@
+{
+  "name": "@efstajas/svelte-stepper",
+  "description": "🚶🚶🚶 A simple library for building delightfully animated stepped flows with Svelte.",
+  "keywords": [
+    "svelte",
+    "sveltekit",
+    "typescript",
+    "javascript",
+    "js",
+    "ts",
+    "ui-library",
+    "stepper",
+    "animations"
+  ],
+  "version": "0.2.2",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "svelte-kit sync && svelte-package -o package",
+    "build-demo": "vite build",
+    "test": "playwright test",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+    "test:unit": "vitest",
+    "lint": "prettier --check . && eslint .",
+    "format": "prettier --write . --plugin='prettier-plugin-svelte'"
+  },
+  "peerDependencies": {
+    "svelte": "^4.0.0 || ^5.0.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.28.1",
+    "@sveltejs/adapter-auto": "^6.1.0",
+    "@sveltejs/kit": "^2.31.1",
+    "@sveltejs/package": "^2.4.1",
+    "@sveltejs/vite-plugin-svelte": "^6.1.2",
+    "@typescript-eslint/eslint-plugin": "^6.5.0",
+    "@typescript-eslint/parser": "^6.5.0",
+    "eslint": "^8.48.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-svelte": "^3.11.0",
+    "lightningcss": "^1.30.1",
+    "prettier": "^3.0.3",
+    "prettier-plugin-svelte": "^3.4.0",
+    "svelte": "^5.38.1",
+    "svelte-check": "^4.3.1",
+    "svelte-highlight": "^7.2.0",
+    "terser": "^5.43.1",
+    "tslib": "^2.4.1",
+    "typescript": "^5.0.0",
+    "vite": "^7.1.2",
+    "vitest": "^3.2.4"
+  },
+  "type": "module",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./package/index.d.ts",
+      "svelte": "./package/index.js",
+      "default": "./package/index.js"
+    },
+    "./step-controller": {
+      "types": "./package/step-controller.d.ts",
+      "default": "./package/step-controller.js"
+    },
+    "./stepper.svelte": {
+      "types": "./package/stepper.svelte.d.ts",
+      "svelte": "./package/stepper.svelte",
+      "default": "./package/stepper.svelte"
+    },
+    "./types": {
+      "types": "./package/types.d.ts",
+      "default": "./package/types.js"
+    }
+  },
+  "files": [
+    "package"
+  ],
+  "svelte": "./package/index.js",
+  "typesVersions": {
+    ">4.0": {
+      "index": [
+        "./package/index.d.ts"
+      ],
+      "step-controller": [
+        "./package/step-controller.d.ts"
+      ],
+      "stepper.svelte": [
+        "./package/stepper.svelte.d.ts"
+      ],
+      "types": [
+        "./package/types.d.ts"
+      ]
+    }
+  },
+  "dependencies": {
+    "esm-env": "^1.0.0"
+  }
+}
